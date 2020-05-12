@@ -20,7 +20,7 @@ module MissingMethods
 end
 
 class TestMeme < Minitest::Test
-  extend MissingMethods
+  extend MissingMethods if ENV["EXTEND_WITH_MISSING"]
   include Minitest::Hooks
 
   before(:all) do
